@@ -1,0 +1,15 @@
+body { font-family: Arial, Helvetica, sans-serif; background: #f4f6f8; color: #222; }
+.container { width: 900px; max-width: 95%; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin: 0 0 12px 0; }
+.file-input input { display: block; margin-top: 6px; }
+#preview-area { display: flex; gap: 20px; margin-top: 18px; align-items: flex-start; }
+.preview { width: 300px; height: 300px; border: 1px dashed #ddd; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.preview img { width:100%; height:auto; }
+.preview.placeholder { color:#999; }
+.palette { display: flex; gap: 12px; flex-wrap:wrap; }
+.swatch { width:120px; border: 1px solid #eee; padding: 8px; border-radius:6px; text-align:center; background:white; }
+.color { height:60px; border-radius:4px; box-shadow: inset 0 -6px 12px rgba(0,0,0,0.06); }
+.meta { font-size: 13px; margin-top:8px; color:#333; }
+.error { background: #ffefef; color:#990000; padding:8px; border-radius:6px; margin-bottom:10px; }
+button { padding:8px 14px; border-radius:6px; border: none; cursor:pointer; background:#2b7cff; color:white; }
+footer { margin-top:18px; color:#666; font-size:13px; }

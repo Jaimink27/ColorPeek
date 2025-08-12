@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Palette Generator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Image Colour Palette Generator</h1>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" id="upload-form">
+      <label class="file-input">
+        Choose image (png/jpg/jpeg/gif):
+        <input type="file" name="image" id="image-input" accept="image/*" required />
+      </label>
+
+      <label>
+        Number of colours:
+        <input type="number" name="num_colors" min="1" max="20" value="{{ num_colors or 6 }}" />
+      </label>
+
+      <button type="submit">Extract Palette</button>
+    </form>
+
+    <div id="preview-area">
+      {% if image_data %}
+        <div class="preview">
+          <img src="{{ image_data }}" alt="uploaded image" />
+        </div>
+      {% else %}
+        <div class="preview placeholder">Image preview will appear here</div>
+      {% endif %}
+
+      {% if palette %}
+        <div class="palette">
+          {% for c in palette %}
+            <div class="swatch">
+              <div class="color" style="background: {{ c.hex }}"></div>
+              <div class="meta">{{ c.hex }}<br/>{{ c.rgb }}<br/>{{ c.percent }}%</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <footer>
+      <small>Built with Flask + Pillow. Transparent images are composited onto white.</small>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
