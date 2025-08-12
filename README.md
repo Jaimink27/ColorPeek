@@ -15,9 +15,6 @@ Open Source & Lightweight – Because bloated software is so last decade.
 🛠️ Installation
 Make sure you have Python 3.8+ installed.
 
-bash
-Copy
-Edit
 # Clone the repository
 git clone https://github.com/Jaiminkansagara1327/ColorPeek.git
 
@@ -26,10 +23,8 @@ cd ColorPeek
 
 # Install dependencies
 pip install -r requirements.txt
+
 🚀 Usage
-bash
-Copy
-Edit
 # Basic usage
 python colorpeek.py path/to/image.jpg
 
@@ -48,14 +43,12 @@ Input Image:
 (imagine your favorite image here)
 
 Extracted Colors:
-
-scss
-Copy
-Edit
 1. #1E3A5F  →  RGB(30, 58, 95)
 2. #F9A825  →  RGB(249, 168, 37)
 3. #D84315  →  RGB(216, 67, 21)
+
 🤓 Why ColorPeek?
+
 Because sometimes, you just need the exact shade of blue from that one JPEG your client sent you at 3AM — and you deserve a tool that delivers it without fuss.
 
 Also, it’s lightweight, open-source, and doesn’t try to sell you “ColorPeek Premium” for $9.99/month. You’re welcome.
